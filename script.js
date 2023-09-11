@@ -3,7 +3,7 @@ function threeSum(arr, target) {
 
 	arr.sort((a, b) => a - b);
 
-  const result = [];
+  let result = [];
 
   for (let i = 0; i < arr.length - 2; i++) {
     if (i > 0 && arr[i] === arr[i + 1]) continue;
@@ -11,7 +11,7 @@ function threeSum(arr, target) {
 	  let j=i+1; let k=arr.length-1;
 
 	  while (j < k) {
-	  	let sum = arr[i] + arr[j] + arr[j];
+	  	let sum = arr[i] + arr[j] + arr[k];
 
 		  if (sum === 0) {
 		  	result.push([arr[i], arr[j], arr[k]]);
